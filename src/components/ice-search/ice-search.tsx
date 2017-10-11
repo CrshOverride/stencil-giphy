@@ -11,6 +11,8 @@ export class IceSearch {
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+
+    this.searchTerm = this.searchTerm || null;
   }
 
   handleChange() {
