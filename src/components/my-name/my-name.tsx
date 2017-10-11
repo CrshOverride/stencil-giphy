@@ -11,10 +11,12 @@ export class MyName {
 
   @Prop() last: string;
 
+  @Prop() match: any;
+
   render() {
     return (
       <div>
-        Hello, my name is {this.first} {this.last}
+        Hello, my name is {this.match.params.first} {this.match.params.last}
       </div>
     );
   }

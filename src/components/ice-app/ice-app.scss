@@ -1,0 +1,12 @@
+
+ice-app {
+  height: 100%;
+
+  stencil-router {
+    height: 100%;
+
+    stencil-route[component=ice-search] {
+      height: 100%;
+    }
+  }
+}

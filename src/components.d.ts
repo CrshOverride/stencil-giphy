@@ -6,6 +6,89 @@
 
 import '@stencil/router';
 
+import { IceApp as IceApp } from './components/ice-app/ice-app';
+
+interface HTMLIceAppElement extends IceApp, HTMLElement {
+}
+declare var HTMLIceAppElement: {
+  prototype: HTMLIceAppElement;
+  new (): HTMLIceAppElement;
+};
+declare global {
+  interface HTMLElementTagNameMap {
+      "ice-app": HTMLIceAppElement;
+  }
+  interface ElementTagNameMap {
+      "ice-app": HTMLIceAppElement;
+  }
+  namespace JSX {
+      interface IntrinsicElements {
+          "ice-app": JSXElements.IceAppAttributes;
+      }
+  }
+  namespace JSXElements {
+      export interface IceAppAttributes extends HTMLAttributes {
+        
+      }
+  }
+}
+
+import { IceResults as IceResults } from './components/ice-results/ice-results';
+
+interface HTMLIceResultsElement extends IceResults, HTMLElement {
+}
+declare var HTMLIceResultsElement: {
+  prototype: HTMLIceResultsElement;
+  new (): HTMLIceResultsElement;
+};
+declare global {
+  interface HTMLElementTagNameMap {
+      "ice-results": HTMLIceResultsElement;
+  }
+  interface ElementTagNameMap {
+      "ice-results": HTMLIceResultsElement;
+  }
+  namespace JSX {
+      interface IntrinsicElements {
+          "ice-results": JSXElements.IceResultsAttributes;
+      }
+  }
+  namespace JSXElements {
+      export interface IceResultsAttributes extends HTMLAttributes {
+        
+          match?: any
+      }
+  }
+}
+
+import { IceSearch as IceSearch } from './components/ice-search/ice-search';
+
+interface HTMLIceSearchElement extends IceSearch, HTMLElement {
+}
+declare var HTMLIceSearchElement: {
+  prototype: HTMLIceSearchElement;
+  new (): HTMLIceSearchElement;
+};
+declare global {
+  interface HTMLElementTagNameMap {
+      "ice-search": HTMLIceSearchElement;
+  }
+  interface ElementTagNameMap {
+      "ice-search": HTMLIceSearchElement;
+  }
+  namespace JSX {
+      interface IntrinsicElements {
+          "ice-search": JSXElements.IceSearchAttributes;
+      }
+  }
+  namespace JSXElements {
+      export interface IceSearchAttributes extends HTMLAttributes {
+        
+          searchTerm?: string
+      }
+  }
+}
+
 import { MyName as MyName } from './components/my-name/my-name';
 
 interface HTMLMyNameElement extends MyName, HTMLElement {
@@ -29,8 +112,9 @@ declare global {
   namespace JSXElements {
       export interface MyNameAttributes extends HTMLAttributes {
         
-          first?: any,
-          last?: any
+          first?: string,
+          last?: string,
+          match?: any
       }
   }
 }
