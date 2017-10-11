@@ -17,6 +17,7 @@
   "dependencies": {
     "@stencil/core": "next",
     "@stencil/router": "0.0.16",
+    "mobx": "^3.3.1",
     "semantic-ui": "^2.2.13"
   },
   "devDependencies": {
