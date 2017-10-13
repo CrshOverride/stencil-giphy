@@ -1,4 +1,6 @@
-import { Component } from '@stencil/core';
+import { Component, State } from '@stencil/core';
+import { autorun } from 'mobx';
+import store from '../../stores/search';
 
 @Component({
   tag: 'ice-app',
@@ -6,11 +8,13 @@ import { Component } from '@stencil/core';
 })
 export class IceApp {
   render() {
-    return [
+    return (
       <stencil-router>
-        <stencil-route url={'/'} component='ice-search' exact={true} />
+        <stencil-route url={'/'}
+                       component='ice-search'
+                       exact={true} />
         <stencil-route url={'/:q'} component='ice-results' exact={true} />
       </stencil-router>
-    ]
+    )
   }
 }

@@ -84,37 +84,8 @@ declare global {
   namespace JSXElements {
       export interface IceSearchAttributes extends HTMLAttributes {
         
-          searchTerm?: string
-      }
-  }
-}
-
-import { MyName as MyName } from './components/my-name/my-name';
-
-interface HTMLMyNameElement extends MyName, HTMLElement {
-}
-declare var HTMLMyNameElement: {
-  prototype: HTMLMyNameElement;
-  new (): HTMLMyNameElement;
-};
-declare global {
-  interface HTMLElementTagNameMap {
-      "my-name": HTMLMyNameElement;
-  }
-  interface ElementTagNameMap {
-      "my-name": HTMLMyNameElement;
-  }
-  namespace JSX {
-      interface IntrinsicElements {
-          "my-name": JSXElements.MyNameAttributes;
-      }
-  }
-  namespace JSXElements {
-      export interface MyNameAttributes extends HTMLAttributes {
-        
-          first?: string,
-          last?: string,
-          match?: any
+          searchTerm?: string,
+          store?: any
       }
   }
 }

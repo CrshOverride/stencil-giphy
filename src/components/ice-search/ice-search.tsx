@@ -11,12 +11,10 @@ export class IceSearch {
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-
-    this.searchTerm = this.searchTerm || null;
   }
 
-  handleChange() {
-
+  handleChange(e) {
+    console.log(e);
   };
 
   handleClick() {
@@ -37,9 +35,9 @@ export class IceSearch {
               <div class='field'>
                 <div class='ui massive icon input'>
                   <input type='text'
-                       value={this.searchTerm}
-                       onChange={this.handleChange}
-                       placeholder='I can haz Giphy???'></input>
+                         value={this.searchTerm}
+                         onInput={this.handleChange}
+                         placeholder='I can haz Giphy???'></input>
                 </div>
               </div>
               <div class='ui massive inverted green submit animated fade button'
