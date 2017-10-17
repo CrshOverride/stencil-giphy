@@ -1,20 +1,26 @@
-import { Component, Prop } from '@stencil/core';
+import { Component, Prop, Event, EventEmitter } from '@stencil/core';
 
 @Component({
   tag: 'ice-search',
   styleUrl: 'ice-search.scss'
 })
 export class IceSearch {
-  @Prop() searchTerm: string;
+  @Prop() term: string = null;
+
+  @Prop() dispatch: (string, any) => void;
+
+  @Event() onTermChange: EventEmitter;
+
+  @Event() onSearch: EventEmitter;
 
   constructor() {
-    this.handleChange = this.handleChange.bind(this);
+    this.handleInput = this.handleInput.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(e) {
-    console.log(e);
+  handleInput(e) {
+    this.onTermChange.emit(e.target.value);
   };
 
   handleClick() {
@@ -22,7 +28,7 @@ export class IceSearch {
   };
 
   handleSubmit() {
-
+    this.onSearch.emit();
   };
 
   render() {
@@ -35,8 +41,8 @@ export class IceSearch {
               <div class='field'>
                 <div class='ui massive icon input'>
                   <input type='text'
-                         value={this.searchTerm}
-                         onInput={this.handleChange}
+                         value={this.term}
+                         onInput={this.handleInput}
                          placeholder='I can haz Giphy???'></input>
                 </div>
               </div>

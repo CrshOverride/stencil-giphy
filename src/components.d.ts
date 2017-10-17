@@ -84,8 +84,8 @@ declare global {
   namespace JSXElements {
       export interface IceSearchAttributes extends HTMLAttributes {
         
-          searchTerm?: string,
-          store?: any
+          term?: string,
+          dispatch?: any
       }
   }
 }
