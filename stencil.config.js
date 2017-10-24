@@ -1,10 +1,9 @@
 exports.config = {
-  collections: [
-    { name: '@stencil/router' }
-  ]
+	bundles: [{ components: ["ice-app", "ice-search", "ice-results"] }],
+	collections: [{ name: "@stencil/router" }]
 };
 
 exports.devServer = {
-  root: 'www',
-  watchGlob: '**/**'
-}
+	root: "www",
+	watchGlob: "**/**"
+};

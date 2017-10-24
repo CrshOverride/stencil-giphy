@@ -28,6 +28,8 @@ declare global {
   }
   namespace JSXElements {
       export interface IceAppAttributes extends HTMLAttributes {
+          mode?: string,
+          color?: string,
         
       }
   }
@@ -55,6 +57,8 @@ declare global {
   }
   namespace JSXElements {
       export interface IceResultsAttributes extends HTMLAttributes {
+          mode?: string,
+          color?: string,
         
           match?: any
       }
@@ -83,6 +87,8 @@ declare global {
   }
   namespace JSXElements {
       export interface IceSearchAttributes extends HTMLAttributes {
+          mode?: string,
+          color?: string,
         
           term?: string,
           dispatch?: any
